@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html leng="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>dashboard</title>
+	<link rel="stylesheet" href="{{ url_for('static', filename='main.css') }}">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+	<script src="https://cdn.socket.io/4.6.0/socket.io.min.js" integrity="sha384-c79GN5VsunZvi+Q/WObgk2in0CbZsHnjEqvFxC5DxHn9lTfNce2WW6h2pH6u/kF+" crossorigin="anonymous"></script>
+</head>
+<body>
+	
+	<div class="car-box">
+
+		<div id="loading-screen">
+			<p>Loading...</p>
+		</div>
+		<video id="road-video" muted autoplay loop>
+			<source src="{{ url_for('static',filename='images/차량주행영상3.mp4') }}" type="video/mp4">
+		</video>
+		<img id="window" src="{{ url_for('static',filename='images/5-1주행배경반투명.png') }}">
+		<img id="dashboard" src="{{ url_for('static',filename='images/5-17대시보드.png') }}">
+		<img id="handle" src="{{ url_for('static',filename='images/5-2조향핸들2.png') }}">
+
+		<div id="dashboard-box">
+			
+			<!-- 바늘 -->
+			<img class="needle rpm_needle" src="{{ url_for('static', filename='images/5-3엔진RPM바늘.png') }}">
+			<img class="needle velocity_needle" src="{{ url_for('static', filename='images//5-4차량속도바늘.png') }}">
+
+			<!-- 경고등 -->
+			<img class="alert warn_mdps" src="{{ url_for('static', filename='images/5-6MDPS경고.png') }}">
+			<!-- 에어백 신호 없음 -->
+			<img class="alert warn_airbag" src="{{ url_for('static', filename='images/5-7에어백경고.png') }}">
+			<img class="alert epb" src="{{ url_for('static', filename='images/5-8주차브레이크 작동여부.png') }}">
+			<img class="alert warn_etc" src="{{ url_for('static', filename='images/5-9기타 경고.png') }}">
+			<img class="alert warn_battery" src="{{ url_for('static', filename='images/5-10배터리 경고.png') }}">
+			<img class="alert warn_engineoil" src="{{ url_for('static', filename='images/5-11엔진오일 경고.png') }}">
+			<img class="alert warn_engine" src="{{ url_for('static', filename='images/5-12엔진 경고.png') }}">
+			<img class="alert warn_epb" src="{{ url_for('static', filename='images/5-13전자식 주차브레이크 경고.png') }}">
+			<img class="alert abs" src="{{ url_for('static', filename='images/5-14ABS작동 여부.png') }}">
+			<img class="alert warn_abs" src="{{ url_for('static', filename='images/5-15ABS경고.png') }}">
+
+			<img class="alert alert_malfunc" src="{{ url_for('static', filename='images/5-16대시보드오작동.png') }}">
+			<img class="alert alert_normal" src="{{ url_for('static', filename='images/5-16-2대시보드정상.png') }}">
+
+		</div>
+
+	</div>
+
+	<script src="{{ url_for('static', filename='main.js') }}"></script>
+
+</body>
+</html>
+

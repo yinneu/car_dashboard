@@ -1,0 +1,207 @@
+body {
+    position: relative;
+    margin: 0;
+    padding: 0;
+    overflow-y: hidden;
+    min-width: 700px;
+    /* height: 100vh; */
+}
+
+
+img {
+    position: absolute;
+    top: 0;
+}
+
+#loading-screen {
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	background-color: rgba(159, 159, 159);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	opacity: 1;
+	z-index: 999;
+	transition-duration: 2s;
+}
+
+#loading-screen.fade {
+	opacity: 0;
+}
+
+
+
+/* 차 전체 대시보드 영역 */
+.car-box {
+    position: relative;
+    width: 100%;
+    padding-top: 45.1%;
+}
+
+
+/* background video */
+.background {
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+    overflow: hidden;
+    position: absolute;
+}
+
+/* 주행영상 */
+video {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    z-index: -1;
+    transform: translateY(-64%);
+}
+
+/* 창 */
+#window {
+    opacity: 0.5;
+    width: 100%;
+    height: 34.2%;
+    z-index: -1;
+}
+
+
+/* 계기판 배경 */
+#dashboard{
+    left: 0;
+    width: 100%;
+}
+
+
+/* 핸들 */
+#handle{
+    top: 42%;
+    left: 18.7%;
+    width: 24.45%;
+    transition: all 0.2s linear;
+    z-index: 10;
+}
+
+
+
+
+
+
+
+/* 계기판 작동 */
+#dashboard-box {
+    position: absolute;
+    top: 30%;
+    left: 11%;
+    width: 40%;
+    height: 28%;
+}
+
+
+#dashboard-box .needle {
+    position: absolute;
+    top: 54%;
+    width: 10%;
+    transform-origin: 99% 1%;
+    transition: all 0.2s linear;
+}
+
+/* 속도 바늘 */
+.rpm_needle {
+    left: 12%;
+}
+
+/* rpm 바늘 */
+.velocity_needle {
+    left: 67%;
+}
+
+
+
+
+/* alert */
+.alert {
+    width: 6%;
+    opacity: 0;
+    transition: all 0.1s ease-in-out;
+}
+
+.warn_mdps {
+    top: 70%;
+    left: 4%;
+}
+
+/* 신호없음 */
+.warn_airbag {
+    top: 80%;
+    left: 10%;
+}
+
+.epb {
+    top: 32%;
+    left: 23.5%;
+    width: 8%;
+}
+
+.warn_etc {
+    left: 27%;
+    width: 7%;
+}
+
+.warn_battery {
+    top: 63%;
+    left: 31%;
+    width: 10%;
+}
+
+.warn_engineoil {
+    top: 75%;
+    left: 26.5%;
+    width: 10%;
+}
+
+.warn_engine {
+    top: 74%;
+    left: 63.5%;
+    width: 8%;
+}
+
+.warn_epb {
+    top: 40%;
+    left: 89.5%;
+    width: 8%;
+}
+
+.abs {
+    top: 50%;
+    left: 89%;
+    width: 8%;
+}
+
+.warn_abs {
+    top: 65%;
+    left: 87.5%;
+    width: 8%;
+}
+
+
+.alert_normal {
+    top: 14%;
+    left: 35.5%;
+    width: 27%;
+    opacity: 1;
+}
+
+.alert_malfunc {
+    top: 23%;
+    left: 41%;
+    width: 17%;
+}
+
+
+
+
+
